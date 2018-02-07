@@ -7,8 +7,8 @@
 ####
 
 team_name = 'China Numba One' # Only 10 chars displayed.
-strategy_name = 'Ching Chong Wong Tong'
-strategy_description = 'Copies the previous move the other player played. Randomly chooses first move.'
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
