@@ -7,7 +7,7 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'A team of losers because theres no one on it.' # Only 10 chars displayed.
+team_name = 'Fry and his Freeze Chamber' # Only 10 chars displayed.
 strategy_name = 'The name the team gives to this strategy'
 strategy_description = 'How does this strategy decide?'
     
