@@ -26,8 +26,20 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
     
-    return 'c'
-
+    if len(my_history) == 0:
+        return 'c'
+    if their_history[-3:-1] == 'bbbb':
+        return 'b'
+    else:
+        return 'c'
+        
+    if len(my_history) == 0:
+        return 'b'
+    if their_history[-3:-1] == 'cccc':
+        return 'c'
+    else:
+        return 'b'
+    
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
@@ -52,11 +64,11 @@ if __name__ == '__main__':
               their_history='', 
               my_score=0,
               their_score=0,
-              result='b'):
-         print 'Test passed'
+              result='c'):
+         print ('Test passed')
      # Test 2: Continue betraying if they collude despite being betrayed.
-    test_move(my_history='bbb',
-              their_history='ccc', 
+    test_move(my_history='',
+              their_history='bbbb', 
               # Note the scores are for testing move().
               # The history and scores don't need to match unless
               # that is relevant to the test of move(). Here,
