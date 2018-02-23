@@ -38,8 +38,18 @@ import example4, example5, example6, example7
 import team0, team1, team2, team3, team4
 import team5, team6, team7, team8, team9
 import team10, team11, team12, team13, team14
-betray = example1
-collude = example0
+betray = 'b'
+collude = 'c'
+
+def move(my_history, their_history, my_score, their_score):
+    if len (my_history)== 0:
+        return 'b'
+    elif their_history [-1]== 'b':
+        return 'c'
+    else:
+        return 'b'
+        
+        
 
 modules = [example0, example1, example2, example3, example4, example5, example6, example7,
 team0, team1, team2, team3, team4, team5, team6, team7, team8, team9, team10, 
@@ -124,10 +134,10 @@ def play_round(player1, player2, score1, score2, moves1, moves2):
     Returns a 2-tuple with score1 and score2 incremented by this round
     '''
     
-    RELEASE = 0 # (R, "reward" in literature) when both players collude
-    TREAT = 100 # (T, "temptation" in literature) when you betray your partner
-    SEVERE_PUNISHMENT = -500 # (S, "sucker" in literature) when your partner betrays you
-    PUNISHMENT = -250 # (P) when both players betray each other
+    RELEASE = 100 # (R, "reward" in literature) when both players collude
+    TREAT = 250 # (T, "temptation" in literature) when you betray your partner
+    SEVERE_PUNISHMENT = -250 # (S, "sucker" in literature) when your partner betrays you
+    PUNISHMENT = -100 # (P) when both players betray each other
     
     # Keep T > R > P > S to be a Prisoner's Dilemma
     # Keep 2R > T + S to be an Iterative Prisoner's Dilemma
